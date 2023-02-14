@@ -28,7 +28,8 @@ console.log(req.body)
       email: newUser.email,
       firstName: newUser.firstName,
       lastName: newUser.lastName,
-      phoneNumber: newUser.phoneNumber
+      phoneNumber: newUser.phoneNumber,
+      admin: newUser.admin
     };
     const token = jwt.sign({payload}, process.env.JWT_SECRET,{expiresIn:'30d'});
   
@@ -63,7 +64,8 @@ const login = async (req, res) => {
             email: existingUser.email,
             firstName: existingUser.firstName,
             lastName: existingUser.lastName,
-            phoneNumber: existingUser.phoneNumber
+            phoneNumber: existingUser.phoneNumber,
+            admin: existingUser.admin
           };
           const token = jwt.sign({payload}, process.env.JWT_SECRET,{expiresIn:'30d'});
   

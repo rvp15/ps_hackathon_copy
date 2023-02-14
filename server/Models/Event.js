@@ -7,7 +7,7 @@ const eventSchema = new Schema ({
         type: String,
         require: true
     },
-    eventTime: {
+    eventdate: {
         type: String,
         require: true
     },
@@ -19,15 +19,16 @@ const eventSchema = new Schema ({
         type: String,
         require: true
     },
-    registrationLimit: {
-        type: Number
-    },
-    eventSchedule: {
-        type: String
+    limit: {
+        type: Number,
+        require: true
     },
     image: {
-        data: Buffer,
-        contentType: String
+        type: String,
+        require: true
+    },
+    eventid:{
+        type: String
     }
 
 
