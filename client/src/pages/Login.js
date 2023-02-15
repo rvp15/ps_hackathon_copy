@@ -2,14 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { FaSignInAlt } from "react-icons/fa";
 import axios from "axios";
-import {toast} from 'react-toastify';
-import { useDispatch} from "react-redux";
-import { setuser } from '../features/auth/authSlice';
+import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { setuser } from "../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
-
-const axiosAuth = axios.create({
-  baseURL: "http://localhost:3001/auth",
-});
+import { axiosAuth } from "../axiosSettings";
 
 function Login() {
   const dispatch = useDispatch();
@@ -26,11 +23,11 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       const response = await axiosAuth.post("/login", form);
       console.log(response);
-      toast.success('Login Successful')
+      toast.success("Login Successful");
       //https://blog.logrocket.com/using-react-toastify-style-toast-messages/
       dispatch(setuser(response.data));
       navigate("/profile");

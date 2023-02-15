@@ -5,6 +5,7 @@ import { updateEvents } from "../../features/events/eventSlice";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import {axiosAuth} from "../../axiosSettings"
 
 import {
   MDBCard,
@@ -15,10 +16,6 @@ import {
   MDBBtn,
   MDBRipple,
 } from "mdb-react-ui-kit";
-
-const axiosAuth = axios.create({
-  baseURL: "http://localhost:3001/admin",
-});
 
 function AllEvents() {
   const dispatch = useDispatch();
