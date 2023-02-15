@@ -5,6 +5,7 @@ import { axiosAuth } from "../../axiosSettings";
 import { token } from "../../tokenData";
 
 function Registration() {
+  const [registered, setRegistered] = useState(false)
   const location = useLocation();
   const eventData = location.state?.eventData;
   const user = location.state?.user;
@@ -26,7 +27,7 @@ function Registration() {
         registrationData,
         token
       );
-      console.log(response);
+      setRegistered(true)
     } catch (error) {
       console.log(error);
     }
@@ -57,10 +58,11 @@ function Registration() {
               <img src={eventData.image} className="data-image" />
             </div>
             <div className="form-group">
-              <button className="btn btn-block" type="submit">
+              <button disabled={registered} className="btn btn-block" type="submit">
                 Register
               </button>
             </div>
+            {registered?<div>Event successfully registered!</div>:<></>}
           </form>
         </section>
       ) : (

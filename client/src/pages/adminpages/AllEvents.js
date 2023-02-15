@@ -5,7 +5,7 @@ import { updateEvents } from "../../features/events/eventSlice";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import {axiosAuth} from "../../axiosSettings"
+import { axiosAuth } from "../../axiosSettings";
 
 import {
   MDBCard,
@@ -28,16 +28,34 @@ function AllEvents() {
 
   const retrieveEvents = async () => {
     try {
+      let registrations = [];
+      if (!user.admin) {
+        const allRegistrations = await axiosAuth.get(
+          `/register/registrations/${user.email}`
+        );
+        registrations = allRegistrations.data
+          ? allRegistrations.data.userRegistrations
+          : [];
+      }
       const response = await axiosAuth.get("/admin/allevents");
-      console.log(response);
-      const eventarray = response.data.allevents;
+      const eventarray = [...response.data.allevents];
+      for (let i = 0; i < eventarray.length; i++) {
+        const dataItem = registrations.find(
+          (x) => x.eventname === eventarray[i].eventname
+        );
+        console.log(dataItem);
+        if (dataItem) {
+          eventarray[i].isEventRegistered = true;
+        }
+      }
+      console.log("eventarray", eventarray);
       setEventarray(eventarray);
-      console.log(eventarray);
       dispatch(updateEvents(response.data));
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
     <div>
       <span>
@@ -49,8 +67,8 @@ function AllEvents() {
       <div className="allevent-container">
         {eventarray?.map((item) => {
           return (
-            <div className="each-card">
-              <MDBCard key={item._id}>
+            <div className="each-card" key={item._id}>
+              <MDBCard>
                 <MDBRipple
                   rippleColor="light"
                   rippleTag="div"
@@ -74,7 +92,9 @@ function AllEvents() {
                     {user.admin ? (
                       <MDBBtn>Details</MDBBtn>
                     ) : (
-                      <MDBBtn>Register</MDBBtn>
+                      <MDBBtn disabled={item.isEventRegistered}>
+                        Register
+                      </MDBBtn>
                     )}
                   </Link>
                 </MDBCardBody>
