@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { axiosAuth } from '../../axiosSettings';
-import {token} from '../../tokenData'
-
+import { axiosAuth } from "../../axiosSettings";
+import { token } from "../../tokenData";
 
 function Registration() {
   const location = useLocation();
@@ -22,8 +21,12 @@ function Registration() {
       eventId: _id,
     };
     try {
-      const response = await axiosAuth.post("/register/registerEvent", registrationData, token);
-      console.log(response)
+      const response = await axiosAuth.post(
+        "/register/registerEvent",
+        registrationData,
+        token
+      );
+      console.log(response);
     } catch (error) {
       console.log(error);
     }
