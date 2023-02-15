@@ -3,7 +3,7 @@ display: flex;
 height: 100%;
 position: absolute;
 right: 0px;
-bottom: -90px;
+bottom: -20%;
 }
 .close-btn{
     border-style: none;
