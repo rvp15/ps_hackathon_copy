@@ -13,6 +13,8 @@ import CreateEvents from "./pages/adminpages/CreateEvents";
 import AllEvents from "./pages/adminpages/AllEvents";
 import Registration from "./pages/userpages/Registration";
 import EventDetails from "./pages/adminpages/EventDetails";
+import SideNavBar from "./components/SideNav/SideNavBar";
+
 
 function App() {
   const { user } = useSelector((state) => state.auth);
@@ -56,9 +58,10 @@ function App() {
   return (
     <div className="container">
       <Router>
-        <NavBar />
+     
+        <NavBar />  
         {routes}
-      </Router>
+      </Router><SideNavBar/>
       <ToastContainer />
     </div>
   );

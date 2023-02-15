@@ -3,6 +3,9 @@ import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { axiosAuth } from "../../axiosSettings";
 import { token } from "../../tokenData";
+import { MdArrowBackIosNew } from "react-icons/md";
+import { Link } from "react-router-dom";
+
 
 function Registration() {
   const [registered, setRegistered] = useState(false)
@@ -34,7 +37,9 @@ function Registration() {
   }
 
   return (
-    <div>
+    <div>   <Link to="/profile">
+    <MdArrowBackIosNew />
+  </Link>
       {eventData ? (
         <section className="form">
           <form

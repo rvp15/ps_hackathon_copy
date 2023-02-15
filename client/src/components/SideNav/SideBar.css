@@ -1,0 +1,10 @@
+.side-bar{
+display: flex;
+height: 100%;
+position: absolute;
+right: 0px;
+bottom: -90px;
+}
+.close-btn{
+    border-style: none;
+}
