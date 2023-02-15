@@ -32,7 +32,7 @@ function Register() {
   }else{
     const userData ={firstName,lastName,phnumber,email,password}
   try{
-    const response = await axiosAuth.post("/register", userData);
+    const response = await axiosAuth.post("/auth/register", userData);
     console.log(response);
     dispatch(setuser(response.data));
     navigate("/profile");

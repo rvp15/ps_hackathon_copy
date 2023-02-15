@@ -25,7 +25,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axiosAuth.post("/login", form);
+      const response = await axiosAuth.post("/auth/login", form);
       console.log(response);
       toast.success("Login Successful");
       //https://blog.logrocket.com/using-react-toastify-style-toast-messages/

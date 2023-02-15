@@ -36,7 +36,7 @@ function CreateEvents() {
       toast.error("Please enter all fields");
     } else {
       try {
-        const response = await axiosAuth.post("/addevent", form, token);
+        const response = await axiosAuth.post("/admin/addevent", form, token);
         console.log(response.data);
         navigate("/admin/allevents")
       } catch (error) {

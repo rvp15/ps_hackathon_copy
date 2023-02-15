@@ -28,7 +28,7 @@ function AllEvents() {
 
   const retrieveEvents = async () => {
     try {
-      const response = await axiosAuth.get("/allevents");
+      const response = await axiosAuth.get("/admin/allevents");
       console.log(response);
       const eventarray = response.data.allevents;
       setEventarray(eventarray);

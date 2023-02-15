@@ -22,8 +22,8 @@ function Registration() {
       eventId: _id,
     };
     try {
-      const response = await axiosAuth.post("/registerEvent", registrationData, token);
-      
+      const response = await axiosAuth.post("/register/registerEvent", registrationData, token);
+      console.log(response)
     } catch (error) {
       console.log(error);
     }
@@ -55,7 +55,7 @@ function Registration() {
             </div>
             <div className="form-group">
               <button className="btn btn-block" type="submit">
-                Submit
+                Register
               </button>
             </div>
           </form>
