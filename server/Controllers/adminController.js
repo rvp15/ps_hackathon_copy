@@ -37,6 +37,7 @@ const editEvent = async (req, res) => {
 const allEvent = async(req,res)=>{
 const allevents = await Event.find({})
 res.status(200).json({allevents})
+console.log(allevents)
 }
 
 module.exports = {

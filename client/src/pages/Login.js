@@ -4,7 +4,7 @@ import { FaSignInAlt } from "react-icons/fa";
 import axios from "axios";
 import {toast} from 'react-toastify';
 import { useDispatch} from "react-redux";
-import { setuser } from '../../features/auth/authSlice';
+import { setuser } from '../features/auth/authSlice';
 import { useNavigate } from "react-router-dom";
 
 const axiosAuth = axios.create({

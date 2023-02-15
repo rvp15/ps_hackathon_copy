@@ -6,6 +6,8 @@ import "react-datepicker/dist/react-datepicker.css";
 // import Moment from "moment";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { MdArrowBackIosNew } from "react-icons/md";
+import { Link} from "react-router-dom";
 
 const token =
   localStorage.getItem("token") !== null
@@ -55,9 +57,10 @@ function CreateEvents() {
 
   return (
     <div>
-      <section className="heading">
+      <section className="heading"> <span><Link to="/profile"><MdArrowBackIosNew/></Link></span>
         <p>Create an Event</p>
       </section>
+     
       <section className="form">
         <form onSubmit={handleSubmit}>
           <div className="form-group">

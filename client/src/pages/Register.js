@@ -4,7 +4,7 @@ import { useState} from "react";
 import { FaUser } from "react-icons/fa";
 import {toast} from 'react-toastify';
 import { useDispatch} from "react-redux";
-import { setuser } from '../../features/auth/authSlice';
+import { setuser } from '../features/auth/authSlice';
 import { useNavigate } from "react-router-dom";
 
 

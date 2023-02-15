@@ -85,6 +85,7 @@ h3 {
         font-weight: 700;
         margin-bottom: 50px;
         padding: 0 20px;
+
       }
       
       .heading p {
@@ -163,14 +164,67 @@ h3 {
   }
 /* //////////////////////////////*/
 .admin-container{
-height: 500px;
+height: 50px;
   width: 90%;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+ margin: 50px;
+
   }
   .new-event{
-    padding: 160px;
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+    min-width: 200px;
     -webkit-box-shadow: 3px 7px 7px 2px #737272;
     box-shadow: 3px 7px 7px 2px #918f8f;
   }
+  .new-event:hover{
+    transform: scale(0.98);
+  }
+
+  /* /////////////////all events//////////////////////// */
+ .allevent-container{
+  display: flex;
+  flex-wrap: wrap;
+ }
+  .each-card {
+    max-width: 300px;
+  min-width: 300px;
+  max-height: 400px;
+  min-height: 400px;
+  margin: 20px;
+  padding: 20px;
+  -webkit-box-shadow: 3px 7px 7px 2px #908f8f;
+  box-shadow: 3px 7px 7px 1px #a4a3a3;
+  }
+  .summary{
+    max-height: 100px;
+  }
+  /* ///////////////////////////////////////////////////// */
+  .home {
+    font-family: "Sanchez";
+}
+.headline {
+  width: 600px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+.headline > h1 {
+  font-size: 5rem;
+  font-family: 'Aileron';
+  line-height: 1.1;
+}
+
+.home-container{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}

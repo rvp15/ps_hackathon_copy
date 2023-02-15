@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const eventSchema = new Schema ({
-    eventName: {
+    eventname: {
         type: String,
         require: true
     },
@@ -29,6 +29,10 @@ const eventSchema = new Schema ({
     },
     eventid:{
         type: String
+    },
+    status:{
+        type:String,
+        default:"Open"
     }
 
 
