@@ -23,7 +23,7 @@ function App() {
       routes = (
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/details" element={<EventDetails />} />
+          <Route path="/eventdetail" element={<EventDetails />} />
           <Route path="*" element={<EventDetails />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/admin/adminportal" element={<AdminPortal />} />
@@ -37,7 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Registration />} />
-          <Route path="/register" element={<Registration />} />
+          <Route path="/eventregister" element={<Registration />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       );
@@ -49,7 +49,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/eventregister" element={<Register />} />
       </Routes>
     );
   }

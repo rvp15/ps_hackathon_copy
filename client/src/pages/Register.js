@@ -1,16 +1,12 @@
 import React from 'react';
-import axios from "axios";
+
 import { useState} from "react";
 import { FaUser } from "react-icons/fa";
 import {toast} from 'react-toastify';
 import { useDispatch} from "react-redux";
 import { setuser } from '../features/auth/authSlice';
 import { useNavigate } from "react-router-dom";
-
-
-const axiosAuth = axios.create({
-  baseURL: "http://localhost:3001/auth",
-});
+import { axiosAuth } from '../axiosSettings';
 
 function Register() {
   const dispatch = useDispatch();

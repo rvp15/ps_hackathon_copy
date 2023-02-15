@@ -8,18 +8,8 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { Link} from "react-router-dom";
-
-const token =
-  localStorage.getItem("token") !== null
-    ? JSON.parse(localStorage.getItem("token"))
-    : "";
-
-const axiosAuth = axios.create({
-  baseURL: "http://localhost:3001/admin",
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-});
+import { axiosAuth } from '../../axiosSettings';
+import { token } from '../../tokenData';
 
 function CreateEvents() {
   const navigate = useNavigate();

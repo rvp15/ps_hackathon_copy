@@ -12,10 +12,10 @@ const initialState = {
       createevent:(state,action)=>{
         state.eventlist = [...state.eventlist, action.payload]
       },
-      allevent:(state,action)=>{
+      updateEvents:(state,action)=>{
         state.eventlist=action.payload
       }
     }
   })
- export const {createevent,allevent} = eventSlice.actions
+ export const {createevent,updateEvents} = eventSlice.actions
   export default eventSlice.reducer;
