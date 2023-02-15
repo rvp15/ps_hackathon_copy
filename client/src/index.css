@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 body {
   margin: 0;
@@ -18,7 +17,6 @@ code {
     monospace;
 }
 body {
-
   height: 100vh;
   width: 100vw;
 }
@@ -26,7 +24,7 @@ body {
 a {
   text-decoration: none;
   /* color: rgba(0,34,71,255); */
-  font-weight:bold;
+  font-weight: bold;
 }
 
 p {
@@ -46,52 +44,50 @@ h2,
 h3 {
   font-weight: 600;
   margin-bottom: 10px;
-  color: rgba(9,91,166,255);
+  color: rgba(9, 91, 166, 255);
 }
-.navbar-opt{
+.navbar-opt {
   display: flex;
   align-items: center;
- padding-right:20px;
-
+  padding-right: 20px;
 }
 .container {
-    padding: 0;
-    margin: 0;
-    margin-left: 0px;
-      text-align: center;
-      max-width: 100%;
-    }
+  padding: 0;
+  margin: 0;
+  margin-left: 0px;
+  text-align: center;
+  max-width: 100%;
+}
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0px;
-        padding: 15px;
-        border-bottom: 1px solid #b0afaf;
-        margin-bottom: 40px;
-        max-width: 100%;
-      }
-      .navbar-options{
-        display: flex;
-        flex-direction: row;
-       align-items: center;
-      }
-      .nav-span{
-        padding: 20px;
-      }
-      .heading {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 50px;
-        padding: 0 20px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding: 15px;
+  border-bottom: 1px solid #b0afaf;
+  margin-bottom: 40px;
+  max-width: 100%;
+}
+.navbar-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-span {
+  padding: 20px;
+}
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
 
-      }
-      
-      .heading p {
-        color:rgba(0,34,71,255);
-      }
-      .form,
+.heading p {
+  color: rgba(0, 34, 71, 255);
+}
+.form,
 .content {
   width: 40%;
   margin: 0 auto;
@@ -112,86 +108,84 @@ h3 {
   font-family: inherit;
 }
 .form-group label {
-    text-align: left;
-    display: block;
-    margin: 0 0 5px 3px;
-  }
-  .btn-block {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .btn svg {
-    margin-right: 8px;
-  }
-  .btn:hover {
-    transform: scale(0.98);
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    border: 1px solid rgba(9,91,166,255);
-    border-radius: 5px;
-    background: rgba(9,91,166,255); 
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    text-align: center;
-    appearance: button;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }  
-  .logout-btn{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .event-upcoming{
- display: flex;
- flex-direction: column;
- justify-content: flex-start;
- align-items: flex-start;
- padding-left: 60px;
-  }
-  .logo{
-    max-width: 30%;
-    min-width: 30%;
-    max-height: 20%;
-    min-height: 20%;
-    
-   display: flex;
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+.btn-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.btn svg {
+  margin-right: 8px;
+}
+.btn:hover {
+  transform: scale(0.98);
+}
 
-  }
+.btn {
+  padding: 10px 20px;
+  border: 1px solid rgba(9, 91, 166, 255);
+  border-radius: 5px;
+  background: rgba(9, 91, 166, 255);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logout-btn {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.event-upcoming {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 60px;
+}
+.logo {
+  max-width: 30%;
+  min-width: 30%;
+  max-height: 20%;
+  min-height: 20%;
+
+  display: flex;
+}
 /* //////////////////////////////*/
-.admin-container{
-height: 50px;
+.admin-container {
+  height: 50px;
   width: 90%;
   display: flex;
- margin: 50px;
+  margin: 50px;
+}
+.new-event {
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  min-width: 200px;
+  -webkit-box-shadow: 3px 7px 7px 2px #737272;
+  box-shadow: 3px 7px 7px 2px #918f8f;
+}
+.new-event:hover {
+  transform: scale(0.98);
+}
 
-  }
-  .new-event{
-    margin: 20px;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 200px;
-    min-width: 200px;
-    -webkit-box-shadow: 3px 7px 7px 2px #737272;
-    box-shadow: 3px 7px 7px 2px #918f8f;
-  }
-  .new-event:hover{
-    transform: scale(0.98);
-  }
-
-  /* /////////////////all events//////////////////////// */
- .allevent-container{
+/* /////////////////all events//////////////////////// */
+.allevent-container {
   display: flex;
   flex-wrap: wrap;
- }
-  .each-card {
-    max-width: 300px;
+}
+.each-card {
+  max-width: 300px;
   min-width: 300px;
   max-height: 400px;
   min-height: 400px;
@@ -199,13 +193,18 @@ height: 50px;
   padding: 20px;
   -webkit-box-shadow: 3px 7px 7px 2px #908f8f;
   box-shadow: 3px 7px 7px 1px #a4a3a3;
-  }
-  .summary{
-    max-height: 100px;
-  }
-  /* ///////////////////////////////////////////////////// */
-  .home {
-    font-family: "Sanchez";
+}
+.summary {
+  max-height: 100px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+/* ///////////////////////////////////////////////////// */
+.home {
+  font-family: "Sanchez";
 }
 .headline {
   width: 600px;
@@ -219,12 +218,12 @@ height: 50px;
 
 .headline > h1 {
   font-size: 5rem;
-  font-family: 'Aileron';
+  font-family: "Aileron";
   line-height: 1.1;
 }
 
-.home-container{
+.home-container {
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
+  justify-content: space-around;
 }
