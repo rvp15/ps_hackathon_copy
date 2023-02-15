@@ -63,7 +63,7 @@ function AllEvents() {
           <MdArrowBackIosNew />
         </Link>
       </span>
-      <h1>All Events</h1>
+      <h1>Upcoming Events</h1>
       <div className="allevent-container">
         {eventarray?.map((item) => {
           return (

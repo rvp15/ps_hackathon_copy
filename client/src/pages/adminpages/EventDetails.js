@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { axiosAuth } from "../../axiosSettings";
 import { MDBTable, MDBTableHead, MDBTableBody } from "mdb-react-ui-kit";
+import { MdArrowBackIosNew } from "react-icons/md";
+import { Link} from "react-router-dom";
 
 function EventDetails() {
   const [registeredEvents, setRegistered] = useState([]);
@@ -26,6 +28,7 @@ function EventDetails() {
 
   return (
     <div>
+      <span><Link to="/profile"><MdArrowBackIosNew/></Link></span>
       <p>Registered users for event: <strong>{eventData.eventname}</strong></p>
       <MDBTable>
         <MDBTableHead>
@@ -38,7 +41,7 @@ function EventDetails() {
         <MDBTableBody>
           {registeredEvents?.map((registeredEvent) => {
             return (
-              <tr>
+              <tr key={registeredEvent._id}>
                 <td scope="col">{registeredEvent.firstName}</td>
                 <td scope="col">{registeredEvent.lastName}</td>
                 <td scope="col">{registeredEvent.email}</td>
