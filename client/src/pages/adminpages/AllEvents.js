@@ -85,6 +85,10 @@ function AllEvents() {
                 <MDBCardBody className="card-body">
                   <MDBCardTitle>{item.eventname}</MDBCardTitle>
                   <MDBCardText className="summary">{item.summary} </MDBCardText>
+                  <hr />
+                  <MDBCardText>Event date:{item.eventdate.slice(0,10)}</MDBCardText>
+                  <MDBCardText>Register before:{item.deadline.slice(0,10)}</MDBCardText>
+                  <hr />
                   <Link
                     to={user.admin ? `/eventdetail` : `/eventregister`}
                     state={{ eventData: item, user: user }}
@@ -97,6 +101,7 @@ function AllEvents() {
                       </MDBBtn>
                     )}
                   </Link>
+                 
                 </MDBCardBody>
               </MDBCard>
             </div>
