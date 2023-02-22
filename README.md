@@ -24,12 +24,12 @@ Command : npm start (for both client and server)
 
 Application Layout:
 - Home Page
-![screenshot_1.png](ps_hackathon_copy/client/src/assets/screenshot_1.png)
+![screenshot_1.png](client/src/assets/screenshot_1.png)
 - Login Page
-![screenshot_2.png](ps_hackathon_copy/client/src/assets/Screenshot_2.png)
+![screenshot_2.png](client/src/assets/Screenshot_2.png)
 - New Client Registration Page
-![screenshot_3.png](ps_hackathon_copy/client/src/assets/Screenshot_3.png)
+![screenshot_3.png](client/src/assets/Screenshot_3.png)
 - Upcoming Events
-![screenshot_4.png](ps_hackathon_copy/client/src/assets/Screenshot_4.png)
+![screenshot_4.png](client/src/assets/Screenshot_4.png)
 - Register for an event
-![screenshot_5.png](ps_hackathon_copy/client/src/assets/Screenshot_5.png)
+![screenshot_5.png](client/src/assets/Screenshot_5.png)
